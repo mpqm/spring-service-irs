@@ -1,12 +1,3 @@
-<h1 align="center">통합 채용 시스템 프론트엔드<br>
-	IRS (Integration Recruite System) </h1>
-<div align="center">
-  <img src="../image/logo-animation.gif" style="width: 50%">
-</div>
-<br><br><br>
-
-
-
 # 🛠 기술 스택
 <br>
 <div align=center>
