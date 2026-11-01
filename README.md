@@ -114,14 +114,15 @@
 
 | **프로젝트 개발 산출물**       | **링크**                                                                                                                                              |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 🎡 ERD & Architecture | [ERD & Architecture](meta/docs/irs-ERD%20%26%20Architecture.md)                                                                                             |
+| 🎡 ERD & Architecture | [ERD & Architecture](meta/docs/irs-ERD%20%26%20Architecture.md)                                                                                     |
 | ➰ 요구사항 정의서            | [요구사항 정의서](https://docs.google.com/spreadsheets/d/1GIylkjBnw8ZtTUfBgAWqPyGFD1nThtxy/edit?usp=sharing&ouid=117935972514311680024&rtpof=true&sd=true) |
-| 📃 백엔드 API 명세서        | [백엔드 API 명세서](https://app.notion.com/p/SPRING-SERVICE-IRS-API-f44a64eb8b5083a3933681ad6e927d8b?source=copy_link)                                          |
+| 📃 WBS                | [WBS](https://docs.google.com/spreadsheets/d/1H2zjZc7OOBaPXe-shFf3dAPJRBftXKH4/edit?usp=sharing&ouid=117935972514311680024&rtpof=true&sd=true)                                                                                                                                             |
+| 📃 백엔드 API 명세서        | [백엔드 API 명세서](https://app.notion.com/p/SPRING-SERVICE-IRS-API-f44a64eb8b5083a3933681ad6e927d8b?source=copy_link)                                    |
 | 🌱 프론트엔드 화면 설계서       | [프론트엔드 화면 설계서](https://www.figma.com/design/7hhJk8GBwXHjP18kA4C3jb/sabujaks-project?node-id=0-1&t=oWg7N0y2zdBDCPyF-1)                               |
 | 🎥 프로젝트 시연 영상         | [프로젝트 시연 영상](meta/docs/irs-프로젝트%20시연%20영상.md)                                                                                                       |
 | 📃 벡엔드 개발 문서          | [백엔드 개발 문서](meta/docs/irs-벡엔드%20개발%20문서.md)                                                                                                         |
-| 📃 프론트엔드 개발 문서 | [프론트엔드 개발 문서](meta/docs/irs-프론트엔드%20개발%20문서.md)                                                                                                     |
-| 📃 CI/CD 개발 문서 | [CI/CD 개발 문서](meta/docs/irs-CICD%20개발%20문서.md)                                                                                                                           |
+| 📃 프론트엔드 개발 문서        | [프론트엔드 개발 문서](meta/docs/irs-프론트엔드%20개발%20문서.md)                                                                                                     |
+| 📃 CI/CD 개발 문서        | [CI/CD 개발 문서](meta/docs/irs-CICD%20개발%20문서.md)                                                                                                      |
 </details>
 
 <br>
