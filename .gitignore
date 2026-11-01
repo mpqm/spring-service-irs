@@ -70,5 +70,5 @@ frontend/*.sw?
 frontend/*.tsbuildinfo
 
 frontend/vite.config.js
-/cicd/mariadb/**
-/cicd/.env
+/meta/infra/mariadb/**
+/meta/infra/.env

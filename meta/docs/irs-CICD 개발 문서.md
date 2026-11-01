@@ -1,7 +1,7 @@
 <h1 align="center">통합 채용 시스템 <br>
 	IRS (Integration Recruite System) </h1>
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a2d10980-8f3c-4d47-b015-37429120b350" style="width: 50%">
+  <img src="../image/logo-animation.gif" style="width: 50%">
 </div>
 <br>
 
@@ -86,7 +86,7 @@
 
 ## 🖥️ IRS 운영 환경
 <p align="center">
-<img width="80%" src="img/prometheus-grafana.png"></p>
+<img width="80%" src="../image/prometheus-grafana.png"></p>
 
 - Linux 기반의 리눅스 가상 머신 5대로 구성된 k8s 클러스터를 구축
 - Master Node :1대
@@ -114,7 +114,7 @@
     <summary>
 <span style="font-size:150%"> 백엔드 배포 시나리오 </span></summary>
 <p align="center">
-<img width="80%" src="img/backend-cicd-pipline.png"></p>
+<img width="80%" src="../image/backend-cicd-pipline.png"></p>
 
 1. 🚀 git push
    - 각 브랜치에서 작업이 끝난 후 PR을 요청하여 dev-batch 브랜치에 push & merge를 진행한다.
@@ -141,7 +141,7 @@
     <summary>
 <span style="font-size:150%"> 배치 배포 시나리오 </span></summary>
 <p align="center">
-<img width="80%" src="img/batch-cicd-pipline.png"></p>
+<img width="80%" src="../image/batch-cicd-pipline.png"></p>
 
 1. 🚀 git push
    - 각 브랜치에서 작업이 끝난 후 PR을 요청하여 dev-batch 브랜치에 push & merge를 진행한다.
@@ -168,7 +168,7 @@
     <summary>
 <span style="font-size:150%"> 프론트엔드 배포 시나리오 </span></summary>
 <p align="center">
-<img width="80%" src="img/frontend-cicd-pipline.png"></p>
+<img width="80%" src="../image/frontend-cicd-pipline.png"></p>
 
 1. 🚀 git push
    - 각 브랜치에서 작업이 끝난 후 PR을 요청하여 dev-batch 브랜치에 push & merge를 진행한다.
@@ -204,10 +204,10 @@
 
 - ✅ 성공 메시지 <br>
   - 파이프라인이 성공적으로 완료되었을 때 발생하는 메시지<br>
-  <img width="50%" src="img/discord_success.png"><br><br>
+  <img width="50%" src="../image/discord_success.png"><br><br>
 
 - ❌ 실패 메시지 <br>
   - 파이프라인이 실패했을 때 발생하는 메시지<br>
-  <img width="50%" src="img/discord_fail.png">
+  <img width="50%" src="../image/discord_fail.png">
 
 </details>

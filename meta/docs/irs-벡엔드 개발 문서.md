@@ -1,7 +1,7 @@
 <h1 align="center">통합 채용 시스템 백엔드<br>
 	IRS (Integration Recruite System) </h1>
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a2d10980-8f3c-4d47-b015-37429120b350" style="width: 50%">
+  <img src="../image/logo-animation.gif" style="width: 50%">
 </div>
 <br><br><br>
 
@@ -59,16 +59,16 @@
 		<li>Refresh Token은 Redis에 저장되어 관리되며, Refresh Token Rotation(RTR)을 통해 Access Token 만료 시 Access Token과 Refresh Token 모두 재발급한다.</li>
 		<li>Redis에 유저 email을 Key로 설정하여 하나의 사용자에 대해 하나의 Refresh Token만 존재하도록 한다.</li>
 		<li>Refresh Token의 저장 구조: "key: value = userEmail: refresh token"</li>
-		<img src="https://github.com/user-attachments/assets/538284bb-b22a-48d1-bc62-8dca47efa8fb" style="width: 50%"><br>
-		<img src="https://github.com/user-attachments/assets/99af6be9-2359-4189-85d4-c685fc451c09">
+		<img src="../image/refresh-token1.png"><br>
+		<img src="../image/refresh-token2.png">
 	</ul>
 	<br>
 	➡ Refresh Token 시나리오
 	<ul>
 		<li>정상 유저의 경우, Refresh Token을 사용하여 Redis에서 사용자 정보를 조회하고, 해당 정보와 클라이언트의 쿠키의 Token을 비교해서 정당한 사용자인지를 확인한다. 정상 로그인 후에는 토큰이 갱신되어 서비스를 이어서 사용할 수 있다.</li>
-		<img src="https://github.com/user-attachments/assets/b5a17352-17ae-4a1b-95ca-b1e16653d48f" style="width: 80%"><br>
+		<img src="../image/refresh-token3.png"><br>
 		<li>만약 탈취범이 먼저 Access Token을 탈취하여 aToken과 rToken을 재발급 받아 redis의 rToken도 변경됐다면, 정상 사용자가 api요청 시에 쿠키의 rToken과 Redis에 저장된 rToken이 불일치하여 탈취로 간주하고 로그아웃 처리하게 된다.</li>
-		<img src="https://github.com/user-attachments/assets/a634d842-023f-4bd5-b155-af7e89f717e5" style="width: 80%"><br>
+		<img src="../image/refresh-token4.png"><br>
 		<li>이메일을 키로 사용했기 때문에 탈취한 Refresh Token으로 정상 유저보다 먼저 Access Token을 재발급 받는 경우와 (토큰 탈취된 경우) 한 명의 사용자에 여러 refresh token 값이 저장되는 경우도 해결할 수 있다.</li>
 	</ul>
 	<br>
@@ -114,13 +114,13 @@
 		<li>스프링 시큐리티의 접근제어를 통해 InterviewPaticipate 테이블을 조회해 권한을 확인하는 함수</li>
 		<li>공고 UUID 및 면접 일정 UUID가 지원자에게 있다면 접근을 허용</li>
 		<li>공고 UUID 및 면접 일정 UUID가 지원자에게 없다면 접근을 거부</li>
-		<br><img src="https://github.com/user-attachments/assets/c525fa29-a5c1-4dde-9ef4-49c28a1983ad">
+		<br><img src="../image/room-rbac1.gif">
 	</ul>
  	➡ 화상 면접 방에 접근
 	<ul>
 		<li>화상 면접 방에 참가할 수 있는 Session-Token 발행시 시간대 확인 함수를 통해 면접참여 및 면접스케줄 테이블을 조회해 면접 접속 시간을 확인</li>
 		<li>서버시간과 확인한 값을 비교해 3분전에 접속 가능하게 만든 함수</li>
-		<br><img src="https://github.com/user-attachments/assets/498cdc58-01e9-47a3-a1b1-4d56a8e261e0">
+		<br><img src="../image/room-rbac2.gif">
 	</ul>
 	<br>
 	👍 개선점
@@ -158,11 +158,11 @@
 	<br>
 	🎒 QueryDSL + 페이징 적용 전 → 37.26 s
 	<br>
-	<img src="https://github.com/user-attachments/assets/18d14fa1-3eb6-4584-8634-f7de41350569">
+	<img src="../image/query-dsl1.png">
 	<br><br>
 	🔅 QueryDSL + 페이징 적용 후 → 1.534 s 
 	<br>
-	<img src="https://github.com/user-attachments/assets/c75d1a91-975e-4dd9-99e8-2c8e32aa2c28">
+	<img src="../image/query-dsl2.png">
 </details>
 
 <br>
@@ -183,8 +183,8 @@
 	      <td>➡ 모듈화 패키지 구조</td>
 	  </tr>
 	  <tr>
-	      <td><img width="250" alt="package" src="https://github.com/user-attachments/assets/008f7412-472e-4f49-bbb3-38c56dd37b54"></td>
-	      <td><img width="200" alt="module-package" src="https://github.com/user-attachments/assets/8860e926-a8f3-4c2b-8a61-d090fa78c382"></td>
+	      <td><img width="250" alt="package" src="../image/package-struct1.png"></td>
+	      <td><img width="200" alt="module-package" src="../image/package-struct2.png"></td>
 	  </tr>
         </table>	
     </div>
@@ -196,7 +196,7 @@
         <li>기존의 서비스 코드로는 서버의 부하로 인해 안정적인 서비스 제공이 어렵다고 판단하였다.</li>
     </ul>
     <div align="center">
-        <img width="500" alt="스크린샷 2024-10-28 오전 12 30 22" src="https://github.com/user-attachments/assets/d4d5984e-d633-402c-812d-0fbc37745b14">
+        <img width="500" alt="스크린샷 2024-10-28 오전 12 30 22" src="../image/spring-batch1.png">
     </div>
     <ul>
         <p>1. 역할 분리</p>
@@ -212,7 +212,7 @@
     <ul>
         <p>➡ 배치 적용 후</p>
         <div align="center">
-            <img width="500" alt="스크린샷 2024-10-28 오전 12 28 05" src="https://github.com/user-attachments/assets/296b194d-7239-4eed-9089-5c42dfdf4002">
+            <img width="500" alt="스크린샷 2024-10-28 오전 12 28 05" src="../image/spring-batch2.png">
         </div>
     </ul>
 </details>
@@ -234,10 +234,10 @@
 	</ul>
 	➡ OpenVidu 통신 방식
 	<ul>
-		<img src="https://github.com/user-attachments/assets/a5d0ea1b-1b87-444c-af03-de357e5a4892">
+		<img src="../image/room-openvidu1.png">
 	</ul>
 	➡ OpenVidu 화면
 	<ul>
-		<img src="https://github.com/user-attachments/assets/81a29f11-c1e6-4f85-a8c7-6aaf1e07999c">
+		<img src="../image/room-openvidu2.png">
 	</ul>
 </details>
